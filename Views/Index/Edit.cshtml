@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+    Layout = null;
+}
+
+<h2>Edit</h2>
+<div class="modal fade" id="editUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add/Edit User Details</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form id="AddProduct" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input class="form-control" id="AName" name="Aname" type="text" />
+                                <span id="latval" class="field-validation-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input class="form-control" id="ALat" name="ALat" type="text" />
+                                <span id="latval" class="field-validation-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Address</label>
+                                <input class="form-control" id="ALong" name="ALong" type="text" />
+                                <span id="longval" class="field-validation-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>ProfilePic</label>
+                                <input id="image" type="file" name="ImageFile" required />
+                                <span id="longval" class="field-validation-error"></span>
+                            </div>
+                            <input type="hidden" id="action" name="action" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" onclick="return InsertUser();">Submit</button>
+
+            </div>
+        </div>
+    </div>
+</div>
